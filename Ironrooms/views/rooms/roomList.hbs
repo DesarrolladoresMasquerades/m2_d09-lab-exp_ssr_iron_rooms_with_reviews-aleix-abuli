@@ -1,0 +1,11 @@
+<h2>Room list</h2>
+
+{{#each rooms}}
+    <div>
+        <h3>{{name}}</h3>
+        <p>Owner: <strong>{{owner.fullName}}</strong></p>
+        <a href="/rooms/{{_id}}">Room details</a>
+        <br>
+        <br>
+    </div>
+{{/each}}
