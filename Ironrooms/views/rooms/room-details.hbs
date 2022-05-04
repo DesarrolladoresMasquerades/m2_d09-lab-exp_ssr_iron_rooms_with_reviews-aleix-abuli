@@ -1,0 +1,29 @@
+{{#if errorMessage}}
+    <p style="color:red">{{errorMessage}}</p>
+    <h2>{{room.name}}</h2>
+
+    <h4>Owner</h4>
+    <h3>{{room.owner.fullName}}</h3>
+    <p>Contact at: <strong>{{room.owner.email}}</strong></p>
+    <br>
+    <img src="{{room.imgUrl}}" alt="" style="border-radius: 20px">
+    <p><strong>Description</strong></p>
+    <p>{{room.description}}</p>
+
+<a href="/rooms/{{room._id}}/edit">Edit this room</a>
+
+{{else}}
+
+<h2>{{name}}</h2>
+
+<h4>Owner</h4>
+<h3>{{owner.fullName}}</h3>
+<p>Contact at: <strong>{{owner.email}}</strong></p>
+<br>
+<img src="{{imgUrl}}" alt="" style="border-radius: 20px">
+<p><strong>Description</strong></p>
+<p>{{description}}</p>
+
+<a href="/rooms/{{_id}}/edit">Edit this room</a>
+
+{{/if}}
